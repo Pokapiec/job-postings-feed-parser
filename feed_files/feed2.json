@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Senior Software Engineer",
+    "description": "We are looking for a Senior Software Engineer with experience in Go and distributed systems.",
+    "company": "Tech Innovators Inc.",
+    "location": "New York, NY, USA",
+    "salary": 150000,
+    "employment_type": "Full-Time",
+    "posting_date": "2023-10-01",
+    "company_type": "Direct Employer",
+    "language": "English",
+    "remote": false
+  },
+  {
+    "title": "Junior Developer",
+    "description": "An excellent opportunity for a Junior Developer to join a dynamic team.",
+    "company": "Staffing Solutions",
+    "location": "Toronto, ON, Canada",
+    "salary": 80000,
+    "employment_type": "Full-Time",
+    "posting_date": "2023-10-05",
+    "company_type": "Staffing Firm",
+    "language": "",
+    "remote": false
+  },
+  {
+    "title": "Data Scientist",
+    "description": "Nous recherchons un Data Scientist expérimenté.",
+    "company": "Analytics Corp.",
+    "location": "Montreal, QC, Canada",
+    "salary": 62.5,
+    "employment_type": "Full-Time",
+    "posting_date": "2023-10-10",
+    "company_type": "Direct Employer",
+    "language": "French",
+    "remote": false
+  },
+  {
+    "title": "Project Manager",
+    "description": "Lead projects across various domains.",
+    "company": "Global Enterprises",
+    "location": "London, UK",
+    "salary": 80000,
+    "employment_type": "Full-Time",
+    "posting_date": "2023-10-12",
+    "company_type": "Direct Employer",
+    "language": "English",
+    "remote": true
+  }
+]

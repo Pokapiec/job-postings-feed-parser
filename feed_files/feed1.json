@@ -1,0 +1,98 @@
+[
+    {
+        "title": "Backend Engineer",
+        "description": "Join our backend team to build scalable APIs using Go and microservices architecture.",
+        "company": "NextGen Systems",
+        "location": {
+            "city": "Austin",
+            "state": "TX",
+            "country": "USA"
+        },
+        "salary": {
+            "value": 145000,
+            "currency": "USD"
+        },
+        "employment_type": "Full-Time",
+        "posting_date": "2023-10-03",
+        "company_type": "Direct Employer",
+        "language": "English",
+        "remote": false
+    },
+    {
+        "title": "Frontend Developer Intern",
+        "description": "Looking for an enthusiastic intern to assist in frontend development with React.",
+        "company": "BrightStart Talent",
+        "location": {
+            "city": "Vancouver",
+            "state": "BC",
+            "country": "Canada"
+        },
+        "salary": {
+            "value": 20000,
+            "currency": "CAD"
+        },
+        "employment_type": "Internship",
+        "posting_date": "2023-10-06",
+        "company_type": "Staffing Firm",
+        "language": "English",
+        "remote": false
+    },
+    {
+        "title": "Machine Learning Engineer",
+        "description": "Rejoignez notre équipe pour développer des modèles de machine learning avancés.",
+        "company": "DeepData Labs",
+        "location": {
+            "city": "Paris",
+            "state": "Île-de-France",
+            "country": "France"
+        },
+        "salary": {
+            "value": 70000,
+            "currency": "EUR"
+        },
+        "employment_type": "Full-Time",
+        "posting_date": "2023-10-11",
+        "company_type": "Direct Employer",
+        "language": "French",
+        "remote": false
+    },
+    {
+        "title": "Agile Project Lead",
+        "description": "Drive cross-functional teams in a remote-first environment with agile principles.",
+        "company": "Orbit Global",
+        "location": {
+            "city": "Manchester",
+            "state": "England",
+            "country": "UK"
+        },
+        "salary": {
+            "value": 85000,
+            "currency": "GBP"
+        },
+        "employment_type": "Full-Time",
+        "posting_date": "2023-10-13",
+        "company_type": "Direct Employer",
+        "language": "English",
+        "remote": true
+    },
+    {
+	    "title": "DevOps Consultant",
+	    "description": "We are seeking a highly skilled DevOps Consultant to help scale our CI/CD infrastructure and cloud operations.",
+	    "company": "CloudWorks Pro",
+	    "location": {
+	        "city": "Seattle",
+	        "state": "WA",
+	        "country": "USA"
+	    },
+	    "salary": {
+	        "value": 65,
+	        "currency": "USD",
+	        "unit": "hourly"
+	    },
+	    "employment_type": "Contract",
+	    "posting_date": "2023-10-14",
+	    "company_type": "Consulting Agency",
+	    "language": "English",
+	    "remote": true
+		}
+]
