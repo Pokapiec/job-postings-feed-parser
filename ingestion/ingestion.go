@@ -78,13 +78,22 @@ func (ji *JobIngester) normalizeJob(raw models.RawJobPosting, id string) (*model
 	job.Location = location
 
 	// Normalize salary
-	salary, err := ji.normalizeSalary(raw.Salary)
+	salary, err := ji.NormalizeSalary(raw.Salary, location)
 	if err != nil {
 		return nil, fmt.Errorf("failed to normalize salary: %w", err)
 	}
 	job.Salary = salary
 
 	return job, nil
+}
+
+func (ji *JobIngester) countryToCurrency(countryCode string) string {
+	switch countryCode {
+	case "UK":
+		return "GBP"
+	default:
+		return "USD"
+	}
 }
 
 func (ji *JobIngester) normalizeLocation(locationData interface{}) (models.Location, error) {
@@ -140,7 +149,8 @@ func (ji *JobIngester) parseLocationString(locationStr string) models.Location {
 	return location
 }
 
-func (ji *JobIngester) normalizeSalary(salaryData interface{}) (models.Salary, error) {
+func (ji *JobIngester) NormalizeSalary(salaryData interface{}, location models.Location) (models.Salary, error) {
+	unit := ""
 	switch sal := salaryData.(type) {
 	case map[string]interface{}:
 		// Handle structured salary object
@@ -158,17 +168,27 @@ func (ji *JobIngester) normalizeSalary(salaryData interface{}) (models.Salary, e
 
 		return salary, nil
 	case float64:
+		if sal < 5000 {
+			unit = "hourly"
+		}
+		currency := ji.countryToCurrency(location.Country)
+
 		return models.Salary{
 			Value:    sal,
-			Currency: "USD", // Default assumption
-			Unit:     "",    // Annual by default
+			Currency: currency, // Default assumption
+			Unit:     unit,     // Annual by default
 		}, nil
 	case int:
 		// If it is lower than minimal wage for country just assume it is hourly ?
+		if sal < 5000 {
+			unit = "hourly"
+		}
+		currency := ji.countryToCurrency(location.Country)
+
 		return models.Salary{
 			Value:    float64(sal),
-			Currency: "USD",
-			Unit:     "",
+			Currency: currency,
+			Unit:     unit,
 		}, nil
 	default:
 		return models.Salary{}, fmt.Errorf("unsupported salary format: %T", salaryData)

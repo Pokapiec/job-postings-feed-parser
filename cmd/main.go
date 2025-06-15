@@ -79,7 +79,7 @@ func main() {
 	fmt.Println("=== Job Ingestion and Approval System ===")
 	fmt.Println()
 
-	feedFiles := []string{"./feed_files/feed1.json", "./feed_files/feed2.json"}
+	feedFiles := []string{"./feed_files/feed2.json"}
 
 	for _, file := range feedFiles {
 		fmt.Printf("  - %s\n", file)
